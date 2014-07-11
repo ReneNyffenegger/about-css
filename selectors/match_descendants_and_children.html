@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <title>Match children and descendants</title>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <!-- HTML5 (?) <meta charset="utf-8"> -->
+
+   <style type='text/css'>
+
+     .match-here   .match-if-descendent {
+       color: #b70;
+       background-color: #000;
+     }
+
+     .match-here > .match-if-child {
+       color:#b70;
+       background-color: #000;
+     }
+
+     div {
+       border: 1px solid black;
+       margin: 5px;
+       background-color: #eee;
+     }
+
+     div > div {
+       background-color: #ccc;
+     }
+
+     div > div > div {
+       background-color: #7ac;
+     }
+
+   </style>
+  
+
+</head>
+<body>
+
+  Divs that matched are colored <span style='color: #b70; background-color: #000'>like so</span>.
+
+  <div class='match-here'>
+
+    This is the <code>.match-here</code> div.
+
+    <div class='a'>
+       This div should not match, the class is <code>.a</code>
+
+       <div class='match-if-descendent'>
+         This is a <code>.match-if-descendent</code> div. It matches because it's an (indirect) descendent of <code>.match-here</code> 
+        (the corresponding selector is <code>.match-here   .match-if-descendent</code>)
+       </div>
+
+       <div class='match-if-child'>
+         This is a <code>.match-if-child</code> div. It doesn't match because it's a (direct) child of <code>.match-here</code>
+        (the corresponding selector is <code>.match-here &gt; .match-if-child</code>).
+       </div>
+
+    </div>
+
+    <div class='match-if-descendent'>
+      This div should match, it's a descendent;
+    </div>
+
+    <div class='match-if-child'>
+      This div should match, it's a child;
+    </div>
+
+  </div>
+
+  <p>
+
+  <div class='dont-match'>
+   
+    This is the <code>.dont-match</code> div.
+
+    <div class='match-if-descendent'>
+      This div should not match.
+    </div>
+
+    <div class='match-if-child'>
+       Neither should this.
+    </div>
+
+
+  </div>
+
+</body>
+</html>
