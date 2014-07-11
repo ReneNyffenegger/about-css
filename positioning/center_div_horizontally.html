@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <title>Center div horizontally</title>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+   <style type='text/css'>
+
+     body {
+       margin: 0;
+     }
+
+     #container {
+       position: fixed;
+       width: 100%;
+     }
+
+     #center {
+       margin:0 auto;
+       width: 600px;
+       border:#326 1px dotted;
+       height:600px;
+       background-color:#efe;
+     }
+
+     .elem { 
+       position:absolute;
+       border:#392 1px solid;
+       color:#5c4;
+       font-weight:bold;
+      }
+
+   </style>
+  
+</head>
+<body>
+
+  <div id='container'>
+     <div id='center'>
+       
+        <div class='elem' style='margin-top:40px;margin-left:330px;'>40 from top, 330 from left</div>
+        <div class='elem' style='margin-top:350px;margin-left:70px;'>350 from top, 70 from left</div>
+     
+     </div>
+  </div>
+
+
+</body>
+</html>
