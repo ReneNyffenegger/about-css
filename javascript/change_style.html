@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Change CSS Style with JavaScript</title>
+  <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
+  <style type='text/css'>
+    * {font-family:Verdana}
+  </style>
+
+  
+  <script type="text/javascript">
+
+    function changeColor() {
+      var target = document.getElementById('target');
+      target.style.backgroundColor = "#fa3";
+    }
+
+  </script>
+
+</head>
+<body>
+
+  Demonstration on how to change a css style with javascript.
+
+  <form action="#">
+  <div id="target">Pressing the button changes my background color!</div>
+  <input type="submit" value="Change Color" onclick="changeColor();">
+  </form>
+
+</body>
+</html>
