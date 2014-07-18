@@ -10,9 +10,14 @@
   
   <script type="text/javascript">
 
-    function changeColor() {
-      var target = document.getElementById('target');
-      target.style.backgroundColor = "#fa3";
+    function changeColor_1() {
+      var elem = document.getElementById('target_1');
+      elem.style.backgroundColor = "#fa3";
+    }
+
+    function changeColor_2() {
+      var elem = document.getElementById('target_2');
+      elem.style['backgroundColor']='#b5f';
     }
 
   </script>
@@ -23,8 +28,10 @@
   Demonstration on how to change a css style with javascript.
 
   <form action="#">
-  <div id="target">Pressing the button changes my background color!</div>
-  <input type="submit" value="Change Color" onclick="changeColor();">
+  <div id="target_1">Pressing the first button changes my background color! Does this even work in IE?</div>
+  <div id="target_2">Pressing the second button changes my background color! Does this even work in IE?</div>
+  <input type="submit" value="Change top Color" onclick="changeColor_1();">
+  <input type="submit" value="Change bottom Color" onclick="changeColor_2();">
   </form>
 
 </body>
