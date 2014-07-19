@@ -9,9 +9,11 @@
 
     td {border: 1px solid black}
 
-    #em1 {border-spacing: 1em}
-    #px0 {border-spacing: 0px}
-    #px1 {border-spacing: 1px}
+    #em1     {border-spacing: 1em}
+    #em1_em0 {border-spacing: 1em 0em}
+    #em0_em1 {border-spacing: 0em 1em}
+    #px0     {border-spacing: 0px}
+    #px1     {border-spacing: 1px}
 
   </style>
 
@@ -26,6 +28,37 @@
        <tr><td>baz</td><td>three</td></tr>
       </tbody>
    </table>
+
+
+  <div>border-spacing: 1em</div>
+
+   <table summary='.' id='em1'>
+       <tr><td>foo</td><td>one  </td> </tr>
+       <tr><td>bar</td><td>two  </td></tr>
+       <tr><td>baz</td><td>three</td></tr>
+      </tbody>
+   </table>
+
+  <div>border-spacing: 1em 0em</div>
+
+   <table summary='.' id='em1_em0'>
+       <tr><td>foo</td><td>one  </td> </tr>
+       <tr><td>bar</td><td>two  </td></tr>
+       <tr><td>baz</td><td>three</td></tr>
+      </tbody>
+   </table>
+
+
+  <div>border-spacing: 0em 1em</div>
+
+   <table summary='.' id='em0_em1'>
+       <tr><td>foo</td><td>one  </td> </tr>
+       <tr><td>bar</td><td>two  </td></tr>
+       <tr><td>baz</td><td>three</td></tr>
+      </tbody>
+   </table>
+
+
 
 
   <div>border-spacing: 0px</div>
@@ -47,15 +80,6 @@
       </tbody>
    </table>
 
-
-  <div>border-spacing: 1em</div>
-
-   <table summary='.' id='em1'>
-       <tr><td>foo</td><td>one  </td> </tr>
-       <tr><td>bar</td><td>two  </td></tr>
-       <tr><td>baz</td><td>three</td></tr>
-      </tbody>
-   </table>
 
 </body>
 </html>
