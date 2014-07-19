@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+  <title>border-collapse</title>
+
+  <style type="text/css">
+    div {font-family: monospace; margin-top: 3em; margin-bottom: 1em; font-size: 20px}
+
+    td {border: 1px solid black}
+
+    #with-collapse { border-collapse: collapse }
+    #with-seperate { border-collapse: seperate }
+  </style>
+
+</head>
+<body>
+
+  <div>border-collapse: collapse</div>
+
+   <table summary='.' id='with-collapse'>
+       <tr><td>foo</td><td>one  </td> </tr>
+       <tr><td>bar</td><td>two  </td></tr>
+       <tr><td>baz</td><td>three</td></tr>
+      </tbody>
+   </table>
+
+  <div>border-collapse: seperate</div>
+
+   <table summary='.' id='with-seperate'>
+       <tr><td>foo</td><td>one  </td> </tr>
+       <tr><td>bar</td><td>two  </td></tr>
+       <tr><td>baz</td><td>three</td></tr>
+      </tbody>
+   </table>
+
+</body>
+</html>
+
