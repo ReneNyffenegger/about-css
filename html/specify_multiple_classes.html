@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+  <title>Specify multiple classes per tag</title>
+
+  <style type="text/css">
+    .red_box            { border: 2px solid #f52;   }
+    .yellow_background  { background-color: yellow; }
+    .blue_text          { color: blue               }
+
+    div { font-size: 3em; margin-bottom: 1em}
+  </style>
+</head>
+<body>
+
+   <div class='red_box'>Red Box</div>
+   <div class='red_box yellow_background'>Red Box and yellow background</div>
+   <div class='red_box yellow_background blue_text'>Red Box, yellow background and blue text</div>
+   <div class='red_box blue_text'>Red box and blue text</div>
+
+   <div class='red_box' class='blue_text'>At most one class attribute is respected per tag.</div>
+
+  
+
+</body>
+</html>
+
