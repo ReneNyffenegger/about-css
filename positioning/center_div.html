@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<!-- 
+
+   Idea from:
+
+       http://andreaslagerkvist.com/aFramework/Modules/Base/jquery.center.js
+
+-->
+<html>
+<head>
+  <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+  <title>Center div</title>
+
+  <style type="text/css">
+
+    #center_screen,
+    #center_page {
+         background-color:#f93;
+         border: 1px solid black}
+
+    #foo {
+      background-color:#99c;
+      border: 3px solid #88b;
+    }
+
+
+  </style>
+
+  <script type="text/javascript">
+    function main() {
+
+       var foo   =  document.getElementById('foo');
+       foo.style.height = '2000px';
+
+       var scr   = document.getElementById('center_screen');
+       var pag   = document.getElementById('center_page'  );
+
+       var scr_s = scr.style;
+       var pag_s = pag.style;
+
+       scr_s.position   = 'fixed'   ;
+       pag_s.position   = 'absolute';
+
+       scr_s.left       = '50%';
+       pag_s.left       = '50%';
+
+       scr_s.top        = '50%';
+       pag_s.top        = '50%';
+
+       scr_s.zIndex     =  99  ;
+       pag_s.zIndex     =  99  ;
+
+       scr_s.marginLeft = '-' + (scr.offsetWidth  / 2) + 'px';
+       pag_s.marginLeft = '-' + (pag.offsetWidth  / 2) + 'px';
+
+       scr_s.marginTop  = '-' + (scr.offsetHeight / 2) + 'px';
+       pag_s.marginTop  = '-' + (pag.offsetHeight / 2) + 'px';
+
+       pag_s.marginLeft = parseInt(pag_s.marginLeft) + document.documentElement.scrollLeft;
+       pag_s.marginTop  = parseInt(pag_s.marginTop ) + document.documentElement.scrolltop ;
+
+    }
+  </script>
+
+</head>
+<body onload='main();'>
+
+  <div id='foo'></div>
+
+  <div id='center_screen'>Center on the screen</div>
+  <div id='center_page'>Center of the page</div>
+
+
+</body>
+</html>
