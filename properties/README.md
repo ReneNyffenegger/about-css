@@ -4,5 +4,5 @@
 
 ##white-space
 
-[white-space](https://github.com/ReneNyffenegger/about-css/blob/master/positioning/white-space.html) is (along with `font-family: monospace`) an
+[white-space](https://github.com/ReneNyffenegger/about-css/blob/master/properties/white-space.html) is (along with `font-family: monospace`) an
 necessary ingredient for &gt;pre&lt;.
