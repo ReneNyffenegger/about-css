@@ -1,6 +1,6 @@
-# about-css
+# About CSS
 
-Small css examples
+Small CSS examples
 
 ## Links
 
