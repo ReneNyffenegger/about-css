@@ -6,3 +6,5 @@
 
 [white-space](https://github.com/ReneNyffenegger/about-css/blob/master/properties/white-space.html) is (along with `font-family: monospace`) an
 necessary ingredient for &gt;pre&lt;.
+<br>
+See also [Align decimal points](https://github.com/ReneNyffenegger/about-css/blob/master/examples/align-decimal-point.html).
