@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+  <title>visibility</title>
+
+  <script type="text/javascript">
+
+    var hidden = false;
+    function change() {
+      var elem = document.getElementById('foo');
+      elem.style.visibility = hidden ? 'visible' : 'hidden';
+      hidden = !hidden;
+    }
+
+
+  </script>
+</head>
+<body>
+
+  <div id='foo' style='background-color:blue; width:150px; height: 150px'>
+  </div>
+
+
+  <form action='#'>
+    <input type="submit" value="Change visibility" onclick="change()">
+  </form>
+
+</body>
+</html>
