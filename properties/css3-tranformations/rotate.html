@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+  <title>rotate</title>
+
+  <style type="text/css">
+
+    
+    .rotated {
+       position: absolute;
+       left: 200px;
+       top: 200px;
+       font-size:100px;
+    }
+
+    #deg_60 {
+     -webkit-transform: rotate(60deg); /* Chrome?  */
+        -moz-transform: rotate(60deg); /* Firefox  */
+         -ms-transform: rotate(60deg); /* IE       */
+          -o-transform: rotate(60deg); /* Opera    */
+      color: red;
+    }
+
+    #deg_150 {
+     -webkit-transform: rotate(150deg);
+        -moz-transform: rotate(150deg);
+         -ms-transform: rotate(150deg);
+          -o-transform: rotate(150deg);
+      color: blue;
+    }
+
+  </style>
+
+</head>
+<body>
+
+  <div class='rotated' id='deg_60'>60 degrees</div>
+  <div class='rotated' id='deg_150'>150 degrees</div>
+
+</body>
+</html>
+
