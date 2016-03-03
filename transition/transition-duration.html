@@ -27,6 +27,17 @@ function set_y(y) {
 function set_color(c) {
   rect.style.backgroundColor = c;
 }
+function opacity(o) {
+  rect.style.opacity = o;
+}
+function show(b) {
+  if (b) {
+    rect.style.visibility = 'visible';
+  }
+  else {
+    rect.style.visibility = 'hidden';
+  }
+}
 
 function $html(id, txt) {
   id.innerHTML = txt; 
@@ -80,9 +91,11 @@ function update_out() {
 
     <table>
 
-      <tr><td><input type='button' onclick='set_x(100)       ;' value='x=100'></td><td><input type='button' onclick='set_x(300)       ;' value='x=300'></td><td id='out_x'></td></tr>
-      <tr><td><input type='button' onclick='set_y(100)       ;' value='y=100'></td><td><input type='button' onclick='set_y(300)       ;' value='y=300'></td><td id='out_y'></td></tr>
-      <tr><td><input type='button' onclick='set_color("#f00");' value='red'  ></td><td><input type='button' onclick='set_color("#00f");' value='blue' ></td><td id='out_c'></td></tr>
+      <tr><td><input type='button' onclick='set_x(100)       ;' value='x=100'       ></td><td><input type='button' onclick='set_x    (300   );' value='x=300'     ></td><td id='out_x'></td></tr>
+      <tr><td><input type='button' onclick='set_y(100)       ;' value='y=100'       ></td><td><input type='button' onclick='set_y    (300   );' value='y=300'     ></td><td id='out_y'></td></tr>
+      <tr><td><input type='button' onclick='set_color("#f00");' value='red'         ></td><td><input type='button' onclick='set_color("#00f");' value='blue'      ></td><td id='out_c'></td></tr>
+      <tr><td><input type='button' onclick='show     (true  );' value='show'        ></td><td><input type='button' onclick='show     (false );' value='hide'      ></td><td           ></td></tr>
+      <tr><td><input type='button' onclick='opacity  (100   );' value='opacity 100%'></td><td><input type='button' onclick='opacity  (0     );' value='opacity 0%'></td><td           ></td></tr>
 
    </div>
 
