@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+  <title>transition-duration</title>
+
+<script type="text/javascript"><!--{-->
+
+var rect, out_x, out_y, out_c;
+function main() {
+
+  var $ = function(id) {return document.getElementById(id);};
+
+  rect  = $('rect');
+  out_x = $('out_x');
+  out_y = $('out_y');
+  out_c = $('out_c');
+  update_out();
+}
+
+function set_x(x) {
+  rect.style.left = x + 'px';
+}
+function set_y(y) {
+  rect.style.top = y + 'px';
+}
+function set_color(c) {
+  rect.style.backgroundColor = c;
+}
+
+function $html(id, txt) {
+  id.innerHTML = txt; 
+}
+function update_out() {
+
+  console.log('update_out ' + rect.style.left);
+  $html(out_x, rect.style.left);
+  $html(out_y, rect.style.top );
+  $html(out_c, rect.style.backgroundColor );
+
+  setTimeout(update_out, 100);
+}
+  
+
+</script><!--}-->
+<!--{--><style type='text/css'>
+
+#rect {
+
+  position: absolute;
+
+  width: 100px;
+  height: 100px;
+  top: 100px;
+  left: 100px;
+  border: 1px solid black;
+  background-color: yellow;
+
+  transition-duration: 5s;
+  transition-timing-function: linear;
+
+}
+
+#controls {
+
+  position: absolute;
+  top: 500px;
+
+}
+
+</style><!--}-->
+
+</head>
+<body onload='main()'>
+
+
+  <div id='rect'> </div>
+
+  <div id='controls'>
+
+    <table>
+
+      <tr><td><input type='button' onclick='set_x(100)       ;' value='x=100'></td><td><input type='button' onclick='set_x(300)       ;' value='x=300'></td><td id='out_x'></td></tr>
+      <tr><td><input type='button' onclick='set_y(100)       ;' value='y=100'></td><td><input type='button' onclick='set_y(300)       ;' value='y=300'></td><td id='out_y'></td></tr>
+      <tr><td><input type='button' onclick='set_color("#f00");' value='red'  ></td><td><input type='button' onclick='set_color("#00f");' value='blue' ></td><td id='out_c'></td></tr>
+
+   </div>
+
+</body>
+</html>
