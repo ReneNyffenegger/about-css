@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<!-- 
+
+  http://stackoverflow.com/a/524721/180275
+
+  A page contains one or more style sheets which in turn contain one or more
+  rules which contain the actual style declarations.
+
+
+-->
+<html>
+<head>
+  <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+  <title>document.styleSheets</title>
+
+<script type="text/javascript">
+
+  function main() {
+
+    var style = document.createElement('style');
+    style.type = 'text/css';
+    style.appendChild(document.createTextNode('.d1 { color:blue ; font-family: sans-serif; font-size: 100px; margin-bottom: 30px}' ));
+    style.appendChild(document.createTextNode('.d2 { color:red  ; font-family:      serif; font-size:  30px;}' ));
+
+    document.head.appendChild(style);
+  }
+
+  function removeCssRule() {
+    var styles = document.styleSheets[0];
+
+    if (styles.cssRules.length) {
+      styles.deleteRule(0);
+    }
+  }
+
+  function addCssRule() {
+    var styles = document.styleSheets[0];
+
+    styles.insertRule('.d3 { color: green; font-size: 50px } ', 0);
+  }
+
+  function getRules() {
+
+    var styles = document.styleSheets[0];
+
+    var rules = '';
+    for (var i = 0; i<styles.cssRules.length; i++) {
+      rules += styles.cssRules[i].cssText + "\n";
+    }
+    alert(rules);
+
+  }
+
+</script>
+
+</head>
+<body onload='main();'>
+
+  <input type="submit" value="Remove a CSS Rule" onclick="removeCssRule();">
+  <input type="submit" value="Add a CSS Rule" onclick="addCssRule();">
+  <input type="submit" value="Get Rules" onclick="getRules();">
+
+  <div class='d1'>Text in first div</div>
+  <div class='d2'>Text in second div</div>
+  <div class='d3'>Text in third div</div>
+
+</body>
+</html>
