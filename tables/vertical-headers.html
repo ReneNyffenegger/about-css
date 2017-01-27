@@ -1,0 +1,62 @@
+<html>
+<head>
+
+   <title>A Table with vertical headers</title>
+
+   <style>
+
+      table {
+         border-collapse: collapse;
+         table-layout: fixed; /* Horizontal layout only depends on table's and columns' widths. */
+         
+         width: 14em; /* Table width must be set or it wont resize the cells */
+      }
+      td:nth-child(1) {
+          width: 10em;
+      }
+      td {
+          padding: 6px;
+          border: 1px solid #ccc;
+          width: 2em;
+      }
+
+      .rtxt {
+/*       -moz-transform:rotate(-90deg); 
+         -moz-transform-origin: top left;
+         -webkit-transform: rotate(-90deg);
+         -webkit-transform-origin: top left;
+         -o-transform: rotate(-90deg);
+         -o-transform-origin:  top left; */
+
+         transform: rotate(-90deg);
+         transform-origin:  top left;
+
+         position:relative;
+         top:20px;
+      }
+      .rtd {
+         white-space: nowrap;
+         height:8em;
+         vertical-align:bottom
+      }
+   </style>
+
+</head>
+<body>
+
+   <h1>A table with vertical headers</h1>
+
+   <table>
+      <tr>
+         <td></td>
+         <td class='rtd'><div class='rtxt'>The foo</div></td>
+         <td class='rtd'><div class='rtxt'>The bar</div></td>
+         <td class='rtd'><div class='rtxt'>The baz</div></td>
+      </tr>
+      <tr><td>Apples    </td><td>42</td><td>18</td><td> 3</td></tr>
+      <tr><td>Bananas   </td><td> 0</td><td>27</td><td>12</td></tr>
+      <tr><td>MMMMMMMMMM</td><td> 5</td><td>18</td><td>98</td></tr>
+   </table>
+
+</body>
+</html>
