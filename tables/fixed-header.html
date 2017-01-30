@@ -152,6 +152,18 @@
       </div>
     </div>
 
+    <p>
+    Unfortunately, it seems more difficult to create a table with fixed header that goes to the bottom of the page (<code>height: 200px</code> in <code>.container-1</code> determines the overall height of the table).
+    </p>
+    In order to create a table that goes to the bottom, the height needs be found out with Java Script. Alternatively, the height can be specified in an (estimated) percentage. In that case, an additional rule for <code>body</code> must
+    be added in CSS (as has been done in <a href="http://renenyffenegger.ch/Biblisches//Synopsen/Endzeitrede.html">Endzeitrede</a>).
+<pre><code>body {
+  height: 100%;
+  position: absolute;
+}
+</code></pre>
+
+  
     
   </body>
 </html>
