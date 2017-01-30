@@ -1,0 +1,158 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Table with fixed header (CSS only)</title>
+    <!-- JavaScript is only used to sort of the last table in the demo. -->
+    <!--{--><style type="text/css">
+    
+    td {
+      border-bottom: 1px solid #a24;
+      padding: 0.2em;
+  /*  text-align: left; /* IE */
+    }
+    td + td {
+      border-left: 1px dotted #9ac;
+    }
+    th {
+  /*  padding: 0.2em; */
+      padding: 0 0.2em; /* top right */
+  /*  text-align: left; /* IE */
+    }
+    
+    .container-1 {
+      width: 50%;
+      height: 200px;
+      border: 1px solid black;
+   /* margin: auto; /* auto centers it horizontally, if position=relative */
+   /* above is decorative or flexible */
+      position: relative;
+      padding-top: 2.5em; /* height of header */
+    }
+
+    .container-2 {
+  /*  overflow-x: hidden; */
+      overflow-y: auto;   
+      height: 100%;
+    }
+     
+    .header-bg {
+      border-bottom: 1px solid black;
+      background-color: DarkBlue;
+      height: 2.5em; /* height of header */
+      position: absolute;
+      top:   0;
+      right: 0;
+      left:  0;
+    }
+    
+    table {
+      width: 100%;
+   /* overflow-x: hidden; */
+   /* overflow-y: auto;   */
+    }
+
+    .th-inner {
+      color: yellow;
+      position: absolute;
+      top: 0;
+      line-height: 2.5em; /* height of header */
+      text-align: left;
+      border-left: 1px solid #f44;
+      padding-left: 0.2em;
+      margin-left: -0.2em;
+    }
+
+    .first-col .th-inner {
+        border-left: none;
+/*      padding-left: 6px; */
+      }
+    
+    </style><!--}-->
+
+  </head>
+  <body>
+
+    <h1>Table with fixed header (CSS only)</h1>
+
+    <div class="container-1">
+      <div class="header-bg"> </div>
+      <div class="container-2">
+        <table cellspacing="0"><!--{-->
+          <thead>
+            <tr>
+              <th class="first-col">
+                <div class="th-inner">Column one</div>
+              </th>
+              <th>
+                <div class="th-inner">Column two</div>
+              </th>
+              <th>
+                <div class="th-inner">Column three</div>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Foo</td>
+              <td>Bar</td>
+              <td>Baz</td>
+            </tr>
+            <tr>
+              <td>This is quite a long sentence.</td>
+              <td>A word, only</td>
+              <td>Figure: 42</td>
+            </tr>
+            <tr>
+              <td>Bla</td>
+              <td>bla</td>
+              <td>bla</td>
+            </tr>
+            <tr>
+              <td>one</td>
+              <td>two</td>
+              <td>three</td>
+            </tr>
+            <tr>
+              <td>abc def ghi</td>
+              <td>jklmno</td>
+              <td>pqr stuv wxyz</td>
+            </tr>
+            <tr>
+              <td>Natriumhdyrogencarbonat</td>
+              <td>Sulfur</td>
+              <td>NaCl</td>
+            </tr>
+            <tr>
+              <td>Lorem</td>
+              <td>ipsum</td>
+              <td>abc</td>
+            </tr>
+            <tr>
+              <td>less</td>
+              <td>is</td>
+              <td>more (sometimes)</td>
+            </tr>
+            <tr>
+              <td>wake up!</td>
+              <td>sleep well!</td>
+              <td>good bye!</td>
+            </tr>
+            <tr>
+              <td>The moo</td>
+              <td>went on</td>
+              <td>the moon.</td>
+            </tr>
+            <tr>
+              <td>By now, I should</td>
+              <td>have added</td>
+              <td>enough text.</td>
+            </tr>
+          </tbody>
+        </table><!--}-->
+      </div>
+    </div>
+
+    
+  </body>
+</html>
+
