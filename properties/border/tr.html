@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+  <title>border</title>
+  <style type="text/css">
+
+
+     table#B {
+       border-collapse: collapse;
+     }
+
+     tr {
+       border-bottom: #2b3 4px dotted;
+     }
+
+     table {
+       background-color: #f7fcf9;
+     }
+
+     td {
+       padding: 0.4em;
+     }
+
+  </style>
+</head>
+<body>
+
+
+  Two tables: both are equal except that table B has the <code>border-collapse</code> set to <code>collapse</code>.
+
+  <h1>Table A</h1>
+
+  Without the border-collapse property set to collapse, the <code>border-bottom</code> property of <code>tr</code> elements is not applied:
+
+  <table id='A'>
+    <tr>
+      <td>foo</td><td>bar</td><td>baz</td>
+    </tr><tr>
+      <td>one</td><td>two</td><td>three</td>
+    </tr>
+  </table>
+
+  <h1>Table B</h1>
+
+  Yet, with the border-collapse property set to collapse, the <code>border-bottom</code> property of <code>tr</code> elements is applied:
+
+  <table id='B'>
+    <tr>
+      <td>foo</td><td>bar</td><td>baz</td>
+    </tr><tr>
+      <td>one</td><td>two</td><td>three</td>
+    </tr>
+  </table>
+
+  <hr>
+    See also <a href='collapse.html'>border-collapse</a>
+
+</body>
+</html>
