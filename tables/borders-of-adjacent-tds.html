@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+  <title>Borders of adjacent TDs</title>
+
+   <style type="text/css">
+
+     table {border: 1px solid grey}
+
+     .tabcollapse {border-collapse: collapse;}
+     .tabseparate {border-collapse: separate;}
+
+     .foo {border: red   3px solid}
+     .bar {border: blue  3px solid}
+     .baz {border: green 3px solid}
+
+   </style>
+</head>
+<body>
+
+
+  <table class='tabcollapse'>
+    <tr>
+      <td colspan='3'>Table with <code>border-collapse: collapse</code></td>
+    </tr>
+    <tr>
+      <td class='foo'>Foo</td>
+      <td class='bar'>Bar</td>
+      <td class='baz'>Baz</td>
+    </tr>
+  </table>
+
+  <table class='tabseparate'>
+    <tr>
+      <td colspan='3'>Table with <code>border-collapse: separate</code></td>
+    </tr>
+    <tr>
+      <td class='foo'>Foo</td>
+      <td class='bar'>Bar</td>
+      <td class='baz'>Baz</td>
+    </tr>
+  </table>
+
+</body>
+</html>
