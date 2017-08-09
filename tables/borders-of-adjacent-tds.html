@@ -8,12 +8,13 @@
 
      table {border: 1px solid grey}
 
-     .tabcollapse {border-collapse: collapse;}
-     .tabseparate {border-collapse: separate;}
+     .tabcollapse    {border-collapse: collapse;}
+     .tabseparate    {border-collapse: separate;}
+     .borderspacing0 {border-collapse: separate; border-spacing: 0;}
 
-     .foo {border: red   3px solid}
-     .bar {border: blue  3px solid}
-     .baz {border: green 3px solid}
+     .foo {border: red   7px solid}
+     .bar {border: blue  7px solid}
+     .baz {border: #6f6  7px solid}
 
    </style>
 </head>
@@ -31,9 +32,24 @@
     </tr>
   </table>
 
+  <p>
+
   <table class='tabseparate'>
     <tr>
       <td colspan='3'>Table with <code>border-collapse: separate</code></td>
+    </tr>
+    <tr>
+      <td class='foo'>Foo</td>
+      <td class='bar'>Bar</td>
+      <td class='baz'>Baz</td>
+    </tr>
+  </table>
+
+  <p>
+
+  <table class='borderspacing0'>
+    <tr>
+      <td colspan='3'>Table with <code>border-collapse: separate</code> and <code>border-spacing: 0</code></td>
     </tr>
     <tr>
       <td class='foo'>Foo</td>
