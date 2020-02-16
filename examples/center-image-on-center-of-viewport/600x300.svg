@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<svg
+   width  ="600"
+   height ="300"
+   viewBox="0 0 0 0"
+   version="1.1"
+  >
+  <path
+     style="stroke:#ff3322;stroke-width:3"
+     d="M 0,150 H 600" />
+
+  <path
+     style="stroke:#ff3322;stroke-width:3"
+     d="M 300,0 V 300" />
+
+  <rect
+     style="fill:none;stroke:#3344ff;stroke-width:3"
+     width = "598"
+     height= "298"
+     x     =   "1"
+     y     =   "1" />
+
+</svg>
