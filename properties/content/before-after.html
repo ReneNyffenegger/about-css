@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+  <title>CSS property content on ::before and ::after pseudo elements</title>
+
+  <style type="text/css">
+
+     div              {color  : blue       }
+
+     .odd::before     {content: "Odd: "    }
+     .even::before    {content: "Even: "   }
+
+     .prime::after    {content: " (prime)" }
+
+  </style>
+
+</head>
+<body>
+
+   <div                   >Some numbers:</div>
+   <div class='odd'       >One          </div>
+   <div class='even prime'>two          </div>
+   <div class='odd  prime'>three        </div>
+   <div class='even'      >four         </div>
+   <div class='odd  prime'>five         </div>
+
+</body>
+</html>
