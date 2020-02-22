@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+  <title>Observer is on parent</title>
+
+  <style type='text/css'>
+
+    body {margin: 40px 230px;position: absolute}
+
+    div {
+        position        : absolute;
+    }
+
+    .elem {
+        width           :    120px;
+        height          :     80px;
+        font-size       :     30px;
+        background-color: rgba(80%, 40%, 30%, 0.3);
+        border          : 2px solid rgba(90%, 50%, 40%, 0.4);
+    }
+
+   #b1 {
+      transform         : translate(-200px, -30px)
+                        ;
+    }
+   #b2 {
+      transform         : rotate(-25deg)
+                        ;
+    }
+   #b3 {
+      transform         : translate(260px, 120px)
+                        ;
+    }
+   #b4 {
+      transform         : scale(0.6)
+                        ;
+    }
+
+   #b0, #b1, #b2, #b3, #b4 {
+      transform-origin: 60px 40px;
+   }
+
+  </style>
+
+</head>
+<body>
+
+
+     <div id='b0'> <div class='elem'>T0</div>
+    </div>
+
+     <div id='b1'>
+     <div id='b0'> <div class='elem'>T1</div>
+    </div>
+    </div>
+
+     <div id='b2'>
+     <div id='b1'>
+     <div id='b0'> <div class='elem'>T2</div>
+    </div>
+    </div>
+    </div>
+
+     <div id='b3'>
+     <div id='b2'>
+     <div id='b1'>
+     <div id='b0'> <div class='elem'>T3</div>
+    </div>
+    </div>
+    </div>
+    </div>
+
+     <div id='b4'>
+     <div id='b3'>
+     <div id='b2'>
+     <div id='b1'>
+     <div id='b0'> <div class='elem'>T4</div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+
+</body>
+</html>
