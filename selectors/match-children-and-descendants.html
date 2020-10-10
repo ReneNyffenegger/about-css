@@ -9,14 +9,14 @@
 
    <style type='text/css'>
 
-     .match-here   .match-if-descendent {
-       color: #b70;
-       background-color: #000;
+     .match-here   .match-if-descendent { /* Rule 1*/
+       color           : maroon;
+       background-color: greenyellow;
      }
 
-     .match-here > .match-if-child {
-       color:#b70;
-       background-color: #000;
+     .match-here > .match-if-child {      /* Rule 2 */
+       color           : yellow;
+       background-color: red;
      }
 
      div {
@@ -30,7 +30,7 @@
      }
 
      div > div > div {
-       background-color: #7ac;
+       background-color: #aaa;
      }
 
    </style>
@@ -39,33 +39,31 @@
 </head>
 <body>
 
-  Divs that matched are colored <span style='color: #b70; background-color: #000'>like so</span>.
-
   <div class='match-here'>
 
     This is the <code>.match-here</code> div.
 
-    <div class='a'>
-       This div should not match, the class is <code>.a</code>
+    <div class='xyz'>
+       This div does not match, its class is <code>.xyz</code>
 
        <div class='match-if-descendent'>
-         This is a <code>.match-if-descendent</code> div. It matches because it's an (indirect) descendent of <code>.match-here</code> 
+         This is a <code>.match-if-descendent</code> div. It matches <i>Rule 1</i> because it's a (direct or indirect) descendent of <code>.match-here</code> 
         (the corresponding selector is <code>.match-here   .match-if-descendent</code>)
        </div>
 
        <div class='match-if-child'>
-         This is a <code>.match-if-child</code> div. It doesn't match because it's a (direct) child of <code>.match-here</code>
+         This is a <code>.match-if-child</code> div. It doesn't match because it is not a (direct) child of <code>.match-here</code>
         (the corresponding selector is <code>.match-here &gt; .match-if-child</code>).
        </div>
 
     </div>
 
     <div class='match-if-descendent'>
-      This div should match, it's a descendent;
+      This div matches <i>Rule 1</i> because it's a (direct or indirect) descendent of <code>.match-here</code>.
     </div>
 
     <div class='match-if-child'>
-      This div should match, it's a child;
+      This div matches <i>Rule 2</i> because it's a direct descendent of <code>.match-here</code>.
     </div>
 
   </div>
@@ -77,11 +75,11 @@
     This is the <code>.dont-match</code> div.
 
     <div class='match-if-descendent'>
-      This div should not match.
+      This div does not match the first or second rule.
     </div>
 
     <div class='match-if-child'>
-       Neither should this.
+       Neither does this div.
     </div>
 
 
