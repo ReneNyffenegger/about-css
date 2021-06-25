@@ -2,10 +2,10 @@
 <html>
 <head>
   <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
-  <title>TODO</title>
+  <title>CSS property: border-spacing</title>
 
   <style type="text/css">
-    div {font-family: monospace; margin-top: 3em; margin-bottom: 1em; font-size: 20px}
+    div {font-family: monospace; margin-bottom: 1em; font-size: 20px}
 
     td {border: 1px solid black}
 
@@ -15,10 +15,17 @@
     #px0     {border-spacing: 0px}
     #px1     {border-spacing: 1px}
 
+    td.grid {vertical-align: top; padding:10px; border: 1px #222 dotted}
+    #grid {border-collapse: collapse}
+
   </style>
 
 </head>
 <body>
+
+ <table border='0' id='grid'>
+  <tr>
+    <td class='grid'>
 
   <div>no border-spacing</div>
 
@@ -29,40 +36,9 @@
       </tbody>
    </table>
 
-
-  <div>border-spacing: 1em</div>
-
-   <table summary='.' id='em1'>
-       <tr><td>foo</td><td>one  </td> </tr>
-       <tr><td>bar</td><td>two  </td></tr>
-       <tr><td>baz</td><td>three</td></tr>
-      </tbody>
-   </table>
-
-  <div>border-spacing: 1em 0em</div>
-
-   <table summary='.' id='em1_em0'>
-       <tr><td>foo</td><td>one  </td> </tr>
-       <tr><td>bar</td><td>two  </td></tr>
-       <tr><td>baz</td><td>three</td></tr>
-      </tbody>
-   </table>
-
-
-  <div>border-spacing: 0em 1em</div>
-
-   <table summary='.' id='em0_em1'>
-       <tr><td>foo</td><td>one  </td> </tr>
-       <tr><td>bar</td><td>two  </td></tr>
-       <tr><td>baz</td><td>three</td></tr>
-      </tbody>
-   </table>
-
-
-
+   </td><td class='grid'>
 
   <div>border-spacing: 0px</div>
-
    <table summary='.' id='px0'>
        <tr><td>foo</td><td>one  </td> </tr>
        <tr><td>bar</td><td>two  </td></tr>
@@ -70,15 +46,51 @@
       </tbody>
    </table>
 
+   </td><td class='grid'>
 
-  <div>border-spacing: 1px</div>
-
+   <div>border-spacing: 1px</div>
    <table summary='.' id='px1'>
        <tr><td>foo</td><td>one  </td> </tr>
        <tr><td>bar</td><td>two  </td></tr>
        <tr><td>baz</td><td>three</td></tr>
       </tbody>
    </table>
+
+   </td>
+  </tr><tr>
+
+   <td class='grid'>
+
+   <div>border-spacing: 1em</div>
+   <table summary='.' id='em1'>
+       <tr><td>foo</td><td>one  </td> </tr>
+       <tr><td>bar</td><td>two  </td></tr>
+       <tr><td>baz</td><td>three</td></tr>
+      </tbody>
+   </table>
+
+  </td><td class='grid'>
+
+
+   <div>border-spacing: 1em 0em</div>
+   <table summary='.' id='em1_em0'>
+       <tr><td>foo</td><td>one  </td> </tr>
+       <tr><td>bar</td><td>two  </td></tr>
+       <tr><td>baz</td><td>three</td></tr>
+      </tbody>
+   </table>
+
+   </td><td class='grid'>
+
+  <div>border-spacing: 0em 1em</div>
+   <table summary='.' id='em0_em1'>
+       <tr><td>foo</td><td>one  </td> </tr>
+       <tr><td>bar</td><td>two  </td></tr>
+       <tr><td>baz</td><td>three</td></tr>
+      </tbody>
+   </table>
+
+   </td></tr>
 
 
 </body>
