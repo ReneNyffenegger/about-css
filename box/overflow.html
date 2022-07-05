@@ -6,15 +6,32 @@
 
   <style type="text/css">
 
-    div {position: absolute; max-height: 110px;max-width:50px;border: 1px solid black; background-color:yellow;}
-
-    #left {
-      left: 10px;
+    div.container {
+      position: absolute;
+      width:150px;
+      height: 110px;
+      border: 1px solid black;
     }
 
-    #right {
-      left: 110px;
+    div.text {
+      position: relative;
+      background-color:yellow;
+      width: max-content;
+    }
+
+    #hidden {
+      left: 10px;
+      overflow: hidden;
+    }
+
+    #scroll {
+      left: 170px;
       overflow: scroll;
+    }
+
+    #visible {
+      left: 330px;
+      overflow: visible;
     }
     
   </style>
@@ -22,34 +39,56 @@
 </head>
 <body>
 
-  <div id='left'>
-     one<br>
-     two<br>
-     three<br>
-     four<br>
-     five<br>
-     six<br>
-     seven<br>
-     eight<br>
-     nine<br>
-     ten
+  <div class='container' id='hidden'>
+    <div class='text'>
+    <b>hidden</b><p>
+    Lorem ipsum dolor sit amet, consectetur<br>
+    adipiscing elit, sed do eiusmod tempor<br>
+    incididunt ut labore et dolore magna aliqua.<br>
+    Ut enim ad minim veniam, quis nostrud<br>
+    exercitation ullamco laboris nisi ut aliquip<br>
+    ex ea commodo consequat.<br>
+    Duis aute irure dolor in reprehenderit in<br>
+    voluptate velit esse cillum dolore eu fugiat<br>
+    nulla pariatur. Excepteur sint occaecat<br>
+    cupidatat non proident, sunt in culpa qui<br>
+    officia deserunt mollit anim id est laborum.
+    </div>
   </div>
 
-  <div id='right'>
-     one<br>
-     two<br>
-     three<br>
-     four<br>
-     five<br>
-     six<br>
-     seven<br>
-     eight<br>
-     nine<br>
-     ten
+  <div class='container' id='scroll'>
+    <div class='text'>
+    <b>scroll</b><p>
+    Lorem ipsum dolor sit amet, consectetur<br>
+    adipiscing elit, sed do eiusmod tempor<br>
+    incididunt ut labore et dolore magna aliqua.<br>
+    Ut enim ad minim veniam, quis nostrud<br>
+    exercitation ullamco laboris nisi ut aliquip<br>
+    ex ea commodo consequat.<br>
+    Duis aute irure dolor in reprehenderit in<br>
+    voluptate velit esse cillum dolore eu fugiat<br>
+    nulla pariatur. Excepteur sint occaecat<br>
+    cupidatat non proident, sunt in culpa qui<br>
+    officia deserunt mollit anim id est laborum.
+    </div>
   </div>
 
-  
+  <div class='container' id='visible'>
+    <div class='text'>
+    <b>visible</b><p>
+    Lorem ipsum dolor sit amet, consectetur<br>
+    adipiscing elit, sed do eiusmod tempor<br>
+    incididunt ut labore et dolore magna aliqua.<br>
+    Ut enim ad minim veniam, quis nostrud<br>
+    exercitation ullamco laboris nisi ut aliquip<br>
+    ex ea commodo consequat.<br>
+    Duis aute irure dolor in reprehenderit in<br>
+    voluptate velit esse cillum dolore eu fugiat<br>
+    nulla pariatur. Excepteur sint occaecat<br>
+    cupidatat non proident, sunt in culpa qui<br>
+    officia deserunt mollit anim id est laborum.
+    </div>
+  </div>
 
 </body>
 </html>
-
