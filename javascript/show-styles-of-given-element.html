@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+  <title>Show elements of style</title>
+
+  <style type="text/css">
+    * { font-family: Garamond, Courier;}
+  </style>
+
+  <script type="text/javascript">
+
+    function getStyle(elem, property_name) { // http://stackoverflow.com/a/2664055/180275
+
+      var value, defaultView = (elem.ownerDocument || document).defaultView;
+
+      if (defaultView && defaultView.getComputedStyle) {      
+
+      // W3C standard way.
+
+      // sanitize property name to css notation.
+      //(Camel case to hyphen, fontSize => font-size)
+         property_name = property_name.replace(/([A-Z])/g, "-$1").toLowerCase();
+
+         return defaultView.getComputedStyle(elem, null).getPropertyValue(property_name);
+      }
+      else if (elem.currentStyle) { // IE
+      // sanitize property name to camelCase
+      //(Reverse of above: font-size => fontSize)
+         property_name = property_name.replace(/\-(\w)/g, function(str, letter) { return letter.toUpperCase(); });
+
+         value = elem.currentStyle[property_name];
+
+         if (/^\d+(em|pt|%|ex)?$/i.test(value)) { 
+         // convert other units to pixels on IE
+            return (function(value) {
+              var oldLeft = elem.style.left, oldRsLeft = elem.runtimeStyle.left;
+              elem.runtimeStyle.left = elem.currentStyle.left;
+              elem.style.left = value || 0;
+              value = elem.style.pixelLeft + "px";
+              elem.style.left = oldLeft;
+              elem.runtimeStyle.left = oldRsLeft;
+              return value;
+           })(value);
+        }
+        return value;
+      }
+    }
+
+    function showStyleValues() {
+
+       var html = document.getElementsByTagName('html')[0];
+       var body = document.getElementsByTagName('body')[0];
+
+       var tab = document.createElement('table');
+
+       tab.style.width='100%';
+       tab.setAttribute('border','1');
+
+       var tab_body = document.createElement('tbody');
+       
+       for (var style_name in html.style) {
+
+           var tr = document.createElement('tr');
+
+           var td_name       = document.createElement('td');
+           var td_html_value = document.createElement('td');
+           var td_body_value = document.createElement('td');
+
+           var html_val = getStyle(html, style_name);
+           var body_val = getStyle(body, style_name);
+
+           td_name      .appendChild(document.createTextNode(style_name));
+           td_html_value.appendChild(document.createTextNode(html_val  ));
+           td_body_value.appendChild(document.createTextNode(body_val  ));
+
+           if (html_val != body_val) {
+              td_html_value.style['color'] = 'red';
+              td_body_value.style['color'] = 'red';
+           }
+
+           tr.appendChild(td_name );
+           tr.appendChild(td_html_value);
+           tr.appendChild(td_body_value);
+
+           tab_body.appendChild(tr);
+       }
+       tab.appendChild(tab_body);
+
+       body.appendChild(tab)
+
+    }
+
+    function main() {
+       showStyleValues();
+    }
+  
+  </script>
+</head>
+<body onload="main();">
+  <h1>CSS Style values for body</h1>
+</body>
+</html>
+

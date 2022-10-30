@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+  <title>overflow css property</title>
+
+  <style type="text/css">
+
+    .container {
+       position: absolute;
+       max-width:150px;
+       height: 110px;
+       border: 1px solid black;
+       overflow: scroll;
+    }
+
+    .text {
+       position: relative;
+       background-color:#ffccaa;
+    }
+
+    #min {
+       left: 10px;
+    }
+
+    #max {
+       left: 170px;
+    }
+
+    #min .text {
+       width: min-content;
+    }
+    #max .text {
+       width: max-content;
+    }
+
+
+  </style>
+
+</head>
+<body>
+
+  <div class='container' id='min'>
+    <div class='text'>
+       <b>1</b> abcdef ghijklmnopqrstu vwx yzabcd efg<br>
+       <b>2</b> hij klmnopq rst uvw xy za bcde fghi<br>
+       <b>3</b> jklmnopqrs tuvwx yzabc defg hijkl<br>
+       <b>4</b> mnopqrst uvwx yza bcdefghijklmnop<br>
+       <b>5</b> qrstu vwxyzabcd<br>
+       <b>6</b> efghijklmnopqrstu<br>
+       <b>7</b> v w xyzabc defg hijklmno pqr stu<br>
+       <b>8</b> vwxyzabcdef ghijklmno pqrs<br>
+       <b>9</b> tuvwxyz
+    </div>
+  </div>
+
+  <div class='container' id='max'>
+    <div class='text'>
+       <b>1</b> abcdef ghijklmnopqrstu vwx yzabcd efg<br>
+       <b>2</b> hij klmnopq rst uvw xy za bcde fghi<br>
+       <b>3</b> jklmnopqrs tuvwx yzabc defg hijkl<br>
+       <b>4</b> mnopqrst uvwx yza bcdefghijklmnop<br>
+       <b>5</b> qrstu vwxyzabcd<br>
+       <b>6</b> efghijklmnopqrstu<br>
+       <b>7</b> v w xyzabc defg hijklmno pqr stu<br>
+       <b>8</b> vwxyzabcdef ghijklmno pqrs<br>
+       <b>9</b> tuvwxyz
+    </div>
+  </div>
+
+
+</body>
+</html>
