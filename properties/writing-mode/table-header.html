@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+  <title>Example: writing-mode for table headers</title>
+
+<style>
+
+  thead td {
+     writing-mode: sideways-lr;
+     vertical-align: bottom;
+/*   writing-mode: vertical-lr; */
+/*   text-orientation: upright */
+  }
+
+</style>
+</head>
+<body>
+
+<table>
+  <thead>
+    <tr>
+      <td></td>
+      <td>Flag one</td>
+      <td>Flag two</td>
+      <td>Flag three</td>
+      <td>Flag four</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+     <td>Foo</td>
+     <td>✓</td>
+     <td>✗</td>
+     <td>✗</td>
+     <td>✓</td>
+    </tr>
+    <tr>
+     <td>Bar</td>
+     <td>✗</td>
+     <td>✓</td>
+     <td>✗</td>
+     <td>✓</td>
+    </tr>
+    <tr>
+     <td>Baz</td>
+     <td>✓</td>
+     <td>✗</td>
+     <td>✓</td>
+     <td>✗</td>
+    </tr>
+  <tbody>
+</table>
+
+</body>
+</html>
+
