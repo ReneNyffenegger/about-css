@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <title>:nth-child()</title>
+
+  <style type='text/css'>
+
+     p {width: 100px; padding: 1px 20px; margin: 1px}
+  
+    .ooo:nth-child(1) {background-color:Gold     }
+    .ooo:nth-child(2) {background-color:LawnGreen}
+
+  </style>
+  
+
+</head>
+<body>
+
+  <div>
+
+    <p class='def'> ABC </p>  <!-- Not colored, is 1st child of parent, BUT NOT a .ooo -->
+    <p class='ooo'> DEF </p>  <!-- Green, is 2nd child of parent -->
+    <p class='ooo'> GHI </p>
+    <p class='ooo'> JKL </p>
+
+  </div>
+
+  <hr>
+
+  <div>
+
+    <p class='ooo'> MNO </p>  <!-- Gold , is 1st child of parent AND a .ooo -->
+    <p class='ooo'> PQR </p>  <!-- Green, ist 2nc child of parent AND a .ooo -->
+    <p class='ooo'> STU </p>
+
+  </div>
+
+</body>
+</html>
