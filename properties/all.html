@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+  <title>CSS test: all</title>
+
+  <style>
+
+     div         { border:           1px solid black;
+                   width:            300px;
+                   margin-bottom:    5px;
+                 }
+
+     div.warning { background-color: yellow;
+                   color:            red;
+                   font-weight:      bold;
+                 }
+
+     div.ok      { background-color: Chartreuse;
+                   color:            DarkGreen;
+                   font-weight:      bold;
+                 }
+
+     div.normal  { all:              initial;}
+
+  </style>
+
+</head>
+<body>
+
+   <div                >Some text</div>
+   <div class='warning'>Take care!</div>
+   <div class='ok'     >All is good.</div>
+   <div class='normal' >Normal text</div>
+   <div                >More text</div>
+
+</body>
+</html>
